@@ -1,7 +1,13 @@
-(function() {
-    // Display an alert to confirm that the script is running
-    alert("JavaScript injection test successful!");
+// debug-scripts.js
 
-    // Log a message to the console for further confirmation
-    console.log("JavaScript injection test successful!");
+(function() {
+
+    // Delay in milliseconds
+    const delay = 1000; // 1 second
+
+    // Set a timeout to delay the execution of the alert and log
+    setTimeout(function() {
+        alert("JavaScript injection test successful!");
+        console.log("JavaScript injection test successful!");
+    }, delay);
 })();
