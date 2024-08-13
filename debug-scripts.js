@@ -3,7 +3,7 @@
 (function() {
 
     // Delay in milliseconds
-    const delay = 3000; // 3 seconds
+    const delay = 5000; // 5 seconds
 
     // Set a timeout to delay the execution of the alert and log
     setTimeout(function() {
