@@ -9,7 +9,9 @@
 <h1>
   The value for `tws_injected` is:
   <script>
-    document.write(tws_injected)
+    // Check if `tws_injected` is defined
+    var value = typeof tws_injected !== 'undefined' ? tws_injected : 'undefined';
+    document.write(value);
   </script>
 </h1>
 </body>
