@@ -12,8 +12,8 @@
   <p>
     <script>
         // Check if `tws_injected` is defined
-        alert(document.documentElement.outerHTML);
-        alert(document.body.outerHTML);
+        console.log(document.documentElement.outerHTML);
+        console.log(document.body.outerHTML);
         var value = (typeof tws_injected !== 'undefined') ? tws_injected : 'undefined';
         document.write(value);
      </script>
