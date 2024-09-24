@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing injection</title>
+  <script>
+    console.log('Will execute a script')
+    var script = document.createElement('script');
+    script.src = 'inject-property.js';
+    document.head.append(script);
+    console.log('Did execute a script')
+  </script>
+</head>
+<body>
+  <h1>
+     The value for `tws_injected` is:
+  </h1>
+  <p>
+    <script>
+        // Check if `tws_injected` is defined
+        console.log('variable will load now');
+        console.log(document.documentElement.outerHTML);
+        var value = (typeof tws_injected !== 'undefined') ? tws_injected : 'undefined';
+        document.write(value);
+     </script>
+  </p>
+</body>
+</html>
