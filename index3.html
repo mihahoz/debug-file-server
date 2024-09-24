@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testing injection</title>
   <script>
-    console.log('Will execute a script')
-    var script = document.createElement('script');
-    script.src = 'inject-property.js';
-    document.head.append(script);
-    console.log('Did execute a script')
+    console.log('Will execute append two scripts')
+
+    var script1 = document.createElement('script');
+    script1.innerText = 'console.log("Script 1 has executed successfully")';
+    document.head.append(script1);
+    
+    var script2 = document.createElement('script');
+    script2.src = 'inject-property.js';
+    document.head.append(script2);
+    
+    console.log('Did append both script')
   </script>
 </head>
 <body>
